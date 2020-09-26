@@ -1,0 +1,7 @@
+==== STACKOVERFLOW ====
+Este un site web pentru programatori.
+Ete o platforma de intrebari si raspunsuri ce pot fi postate/editate de un numar mare de utilizatori.
+Utilizatorii pot vota up/down intrbarile. 
+Pe baza voturilor userii inregistrati primesc puncte.
+Userii neinregistrati au acces la mare parte din functionalitatea site-ului.
+Userii inregistrati (sistem tip sign in) pot pune sau raspunde la intrebari, sa isi creeze un profil sau sa castige reputatie.
