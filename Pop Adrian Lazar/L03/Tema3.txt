@@ -1,0 +1,43 @@
+Modelati workflow-ul de postare a unei intrebari pe o platforma de tipul Stackoverflow.
+
+
+A user posts a new question, the question is validated and the text is analyzed via an ML, the result of the ML can either accept the question, reject it or propose it for manual review. The workflow finishes with New Question Published. 
+ 
+Bounded context: “question context”
+	Workflow: “Post question” 
+		Triggered by: "Post question request received”
+		Input: “Question form” (question title, question body, tags, formatting tooltips etc.)
+		Other inputs(dependencies) 
+		Output: “New Question Published” event 
+		Side effects:  Notification message sent to the user  
+ 
+ 
+ 
+Workflow: “Post a question” 
+	Input: “Question form” 
+	Output: “New Question Published” event or Rejected question or Manual review 
+ 
+//step 1 
+	Do validate question form ( text analyzed via an ML)
+	if question need manual review then 
+		return “Review question”
+	elseif question is rejected then  
+	stop 
+//step 2 
+ Send notification message 
+//step 3 
+ Return “New Question Published” event  
+ 
+ 
+Substep “Validate question form” 
+	Input: “Unvalidated question form” 
+	Output: “Validated question form”
+	Dependencies: Text analyzer (ML) 
+	
+Analyze via an ML the question 
+If the result of the ML accepts the question 
+	Return validated question form 
+Else if manual review 
+	Return manual review 
+	Else return rejected -validation error
+ 
