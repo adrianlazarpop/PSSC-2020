@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Questions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Desktop\edu\AN4\PSSC\GitPSSC\PSSC-2020\Pop Adrian Lazar\L04\Primitives.IO\Primitives.IO.csproj" />
+  </ItemGroup>
+
+</Project>
